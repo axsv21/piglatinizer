@@ -7,13 +7,33 @@
 // Document Ready Function. All of your jQuery should go in here. 
 $( document ).ready(function() {
   $("#submit").click(function(){
-  	alert("click");
-  });
-  })
-
-
-
+      
+  	var sentence=$("#text").val();
+    var wordarray = sentence.split(" ");
+    console.log(wordArray);
 });
+$("#")
+$(document).ready(function(){
+    
+    $("#submit").click(function(){
+        var nameInitials = "";
+        var fullName = $('#yourName').val();
+        var nameArray = fullName.split(" ");
+        
+        for(var i = 0; i < nameArray.length; i++){
+            var name =nameArray[i];
+            var initial = name.slice(0,1);
+        console.log(name);
+            nameInitials = initial +  "";
+            
+        }
+        $(".result").append(nameInitials);
+        
+    });
+ 
+});
+
+
 
 
 // Create the wordToPigLatin function that takes a word as a parameter and returns a transfromed word. 
